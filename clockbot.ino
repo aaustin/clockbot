@@ -56,8 +56,8 @@ void setup() {
   lastMinuteSetting = 1;
   
   for (int i = 0; i < sizeof(allPins)/sizeof(int); i++) {
-    pinMode(allPins[i], INPUT);
-    // pinMode(allPins[i], OUTPUT);
+    // pinMode(allPins[i], INPUT);
+    pinMode(allPins[i], OUTPUT);
     digitalWrite(allPins[i], LOW);
   }
 }
