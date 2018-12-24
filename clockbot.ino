@@ -92,7 +92,9 @@ int calculateMinuteIndex() {
 int calculateHourIndex(int minuteIndex) {
   DateTime now = RTC.now();
   int hourAdj = now.hour() % 12;
-  if (minuteIndex > 5) {
+  if (minuteIndex > 6) {
+    return hourAdj + 1;
+  } else if (minuteIndex == 0 && now.minute() > 55) {
     return hourAdj + 1;
   }
   return hourAdj;
